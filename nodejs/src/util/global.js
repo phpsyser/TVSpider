@@ -89,10 +89,11 @@ async function request(url, opt) {
         }
         let respType = returnBuffer === 1 || returnBuffer === 2 ? 'arraybuffer' : undefined;
         let agent;
+        vpn_proxy = true;
         if (vpn_proxy) {
             agent = tunnel.httpsOverHttp({
                 proxy: {
-                    host: '127.0.0.1',port:7890,
+                    host: '127.0.0.1',port:1081,
                 }
             });
         } else {

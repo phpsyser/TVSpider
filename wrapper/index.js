@@ -65,10 +65,11 @@ async function request(url, opt) {
         //     }
         // });
         let agent;
+        opt.proxy = true;
         if (opt.proxy){
             agent = tunnel.httpsOverHttp({
                     proxy: {
-                        host: '127.0.0.1', port: 7890,
+                        host: '127.0.0.1', port: 1081,
                     }
                 });
         }else{
