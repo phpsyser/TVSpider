@@ -59,13 +59,13 @@ async function request(url, opt) {
             data = toFormData(data);
         }
         let respType = returnBuffer == 1 || returnBuffer == 2 ? 'arraybuffer' : undefined;
-         const agent = tunnel.httpsOverHttp({
-             proxy: {
-                 host: '127.0.0.1', port: 1081,
-             }
-         });
+//         const agent = tunnel.httpsOverHttp({
+//             proxy: {
+//                 host: '127.0.0.1', port: 1081,
+//             }
+//         });
         let agent;
-        opt.proxy = true;
+       // opt.proxy = true;
         if (opt.proxy){
             agent = tunnel.httpsOverHttp({
                     proxy: {
